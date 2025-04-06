@@ -28,8 +28,8 @@ export default function Home() {
 
   const testimonials = [
     "Doubled my bankroll in 3 days – legit props.",
-    "Colt’s confidence ratings hit more than most capper cards.",
-    "Tail or fade, but this dude’s picks are consistent."
+    "Colt\u2019s confidence ratings hit more than most capper cards.",
+    "Tail or fade, but this dude\u2019s picks are consistent."
   ];
 
   return (
@@ -56,7 +56,7 @@ export default function Home() {
                 Buy with Stripe
               </a>
               <a
-                href="https://cash.app/$YourCashtag"
+                href="https://cash.app/$cashouts4e"
                 target="_blank"
                 className="text-blue-600 underline text-sm"
                 rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function Home() {
               key={index}
               className="p-6 border-l-4 border-blue-600 bg-gray-100 rounded shadow"
             >
-              <p className="italic">"{quote}"</p>
+              <p className="italic">{quote}</p>
               <cite className="block mt-2 text-right text-sm">– Verified User</cite>
             </blockquote>
           ))}
