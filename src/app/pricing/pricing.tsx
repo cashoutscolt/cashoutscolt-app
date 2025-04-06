@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";  // Import Hero if you want to use it
+import Hero from "@/components/Hero";  // Optional Hero component
 
 export default function Pricing() {
   const plans = [
@@ -29,7 +29,7 @@ export default function Pricing() {
   return (
     <div>
       <Navbar />
-      <Hero /> {/* Optional Hero section */}
+      <Hero />  {/* Optional Hero section */}
       <section id="pricing" className="bg-gray-50 py-16 px-6">
         <h2 className="text-4xl font-bold text-center mb-10">Our Packages & Pricing</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
