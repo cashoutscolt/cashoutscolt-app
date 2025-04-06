@@ -3,10 +3,10 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div>
-      <Navbar />  {/* Navbar at the top */}
+      <Navbar /> {/* Navbar at the top */}
       <section
         className="relative bg-cover bg-center h-[400px]"
-        style={{ backgroundImage: "url('/path/to/your-image.jpg')" }}  {/* Replace with your image */}
+        style={{ backgroundImage: "url('/path/to/your-image.jpg')" }} // Replace with your image
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center text-center h-full">
@@ -20,7 +20,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      {/* Additional page content */}
+      {/* Add more content if needed */}
     </div>
   );
 }
