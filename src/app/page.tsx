@@ -8,21 +8,21 @@ export default function Home() {
       price: "$15",
       desc: "Full access to consulting insights for 24 hours",
       stripeDesc: "1-day consulting pass - get tailored insights, analysis, and expert input.",
-      stripeUrl: "https://buy.stripe.com/test_daily"
+      stripeUrl: "https://buy.stripe.com/6oE9D1fXBaPg3Uk3cd"
     },
     {
       title: "Weekly Access",
       price: "$50",
       desc: "7 days of premium consulting + custom reports",
       stripeDesc: "7-day access to daily insight reports, direct guidance, and tailored consulting breakdowns.",
-      stripeUrl: "https://buy.stripe.com/test_weekly"
+      stripeUrl: "https://buy.stripe.com/cN202rdPt6z062sdQS"
     },
     {
       title: "VIP Monthly",
       price: "$100",
       desc: "Full consulting access, Discord support, and 1-on-1 breakdowns",
       stripeDesc: "30-day VIP consulting: daily insights, Discord chat, 1-on-1 sessions, and detailed analysis.",
-      stripeUrl: "https://buy.stripe.com/test_monthly"
+      stripeUrl: "https://buy.stripe.com/8wM2az12H1eG76weUU"
     },
   ];
 
