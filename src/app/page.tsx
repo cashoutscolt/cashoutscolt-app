@@ -27,9 +27,9 @@ export default function Home() {
   ];
 
   const testimonials = [
-    'Doubled my bankroll in 3 days - legit props.',
-    'Colts confidence ratings hit more than most capper cards.',
-    'Tail or fade, but this dudes picks are consistent.'
+    "Doubled my bankroll in 3 days - legit props.",
+    "Colt's confidence ratings hit more than most capper cards.",
+    "Tail or fade, but this dude's picks are consistent."
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function Home() {
       <Hero />
 
       <section id="pricing" className="bg-gray-50 py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">Packages & Pricing</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Packages &amp; Pricing</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {plans.map((plan) => (
             <div
@@ -76,7 +76,7 @@ export default function Home() {
               key={index}
               className="p-6 border-l-4 border-blue-600 bg-gray-100 rounded shadow"
             >
-              <p className="italic">{quote}</p>
+              <p className="italic">{quote.replaceAll("\"", "&quot;")}</p>
               <cite className="block mt-2 text-right text-sm">- Verified User</cite>
             </blockquote>
           ))}
