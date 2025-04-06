@@ -28,8 +28,8 @@ export default function Home() {
 
   const testimonials = [
     "Doubled my bankroll in 3 days – legit props.",
-    "Colt\u2019s confidence ratings hit more than most capper cards.",
-    "Tail or fade, but this dude\u2019s picks are consistent."
+    "Colt's confidence ratings hit more than most capper cards.",
+    "Tail or fade, but this dude's picks are consistent."
   ];
 
   return (
