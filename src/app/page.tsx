@@ -7,7 +7,7 @@ export default function Home() {
       title: "Daily Picks",
       price: "$15",
       desc: "Full access to consulting insights for 24 hours",
-      stripeDesc: "1-day consulting pass – get tailored insights, analysis, and expert input.",
+      stripeDesc: "1-day consulting pass - get tailored insights, analysis, and expert input.",
       stripeUrl: "https://buy.stripe.com/test_daily"
     },
     {
@@ -27,9 +27,9 @@ export default function Home() {
   ];
 
   const testimonials = [
-    "Doubled my bankroll in 3 days – legit props.",
-    "Colt's confidence ratings hit more than most capper cards.",
-    "Tail or fade, but this dude's picks are consistent."
+    'Doubled my bankroll in 3 days - legit props.',
+    'Colts confidence ratings hit more than most capper cards.',
+    'Tail or fade, but this dudes picks are consistent.'
   ];
 
   return (
@@ -77,7 +77,7 @@ export default function Home() {
               className="p-6 border-l-4 border-blue-600 bg-gray-100 rounded shadow"
             >
               <p className="italic">{quote}</p>
-              <cite className="block mt-2 text-right text-sm">– Verified User</cite>
+              <cite className="block mt-2 text-right text-sm">- Verified User</cite>
             </blockquote>
           ))}
         </div>
