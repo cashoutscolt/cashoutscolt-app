@@ -1,103 +1,89 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const plans = [
+    {
+      title: "Daily Picks",
+      price: "$15",
+      desc: "Full access to consulting insights for 24 hours",
+      stripeDesc: "1-day consulting pass – get tailored insights, analysis, and expert input.",
+      stripeUrl: "https://buy.stripe.com/test_daily"
+    },
+    {
+      title: "Weekly Access",
+      price: "$50",
+      desc: "7 days of premium consulting + custom reports",
+      stripeDesc: "7-day access to daily insight reports, direct guidance, and tailored consulting breakdowns.",
+      stripeUrl: "https://buy.stripe.com/test_weekly"
+    },
+    {
+      title: "VIP Monthly",
+      price: "$100",
+      desc: "Full consulting access, Discord support, and 1-on-1 breakdowns",
+      stripeDesc: "30-day VIP consulting: daily insights, Discord chat, 1-on-1 sessions, and detailed analysis.",
+      stripeUrl: "https://buy.stripe.com/test_monthly"
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const testimonials = [
+    "Doubled my bankroll in 3 days – legit props.",
+    "Colt’s confidence ratings hit more than most capper cards.",
+    "Tail or fade, but this dude’s picks are consistent."
+  ];
+
+  return (
+    <main className="min-h-screen bg-white text-gray-900">
+      <Hero />
+
+      <section id="pricing" className="bg-gray-50 py-16 px-6">
+        <h2 className="text-3xl font-bold text-center mb-10">Packages & Pricing</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {plans.map((plan) => (
+            <div
+              key={plan.title}
+              className="bg-white shadow-md rounded-xl p-6 flex flex-col items-center text-center"
+            >
+              <h3 className="text-2xl font-semibold mb-2">{plan.title}</h3>
+              <p className="text-gray-600 mb-4">{plan.desc}</p>
+              <p className="text-3xl font-bold mb-6">{plan.price}</p>
+              <a
+                href={plan.stripeUrl}
+                target="_blank"
+                className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition mb-2 text-center"
+                rel="noopener noreferrer"
+              >
+                Buy with Stripe
+              </a>
+              <a
+                href="https://cash.app/$YourCashtag"
+                target="_blank"
+                className="text-blue-600 underline text-sm"
+                rel="noopener noreferrer"
+              >
+                Or pay with Cash App
+              </a>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section id="testimonials" className="bg-white py-16 px-6 border-t">
+        <h2 className="text-3xl font-bold text-center mb-10">What Bettors Are Saying</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {testimonials.map((quote, index) => (
+            <blockquote
+              key={index}
+              className="p-6 border-l-4 border-blue-600 bg-gray-100 rounded shadow"
+            >
+              <p className="italic">"{quote}"</p>
+              <cite className="block mt-2 text-right text-sm">– Verified User</cite>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      <ContactForm />
+    </main>
   );
 }
