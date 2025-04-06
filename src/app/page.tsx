@@ -1,3 +1,5 @@
+'use client';
+
 <style jsx global>{`
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredericka+the+Great&family=Orbitron:wght@400;600;800&display=swap');
   body {
