@@ -20,7 +20,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      {/* Add your home page content here */}
+      {/* Additional page content */}
     </div>
   );
 }
